@@ -11,13 +11,23 @@
 {% block title %}Edit Movie{% endblock %}
 
 {% block content %}
-<div class="content">
+<div class="content container text-center">
 	<h1 class="heading">{{ movie_to_update.title }}</h1>
+	<h3 class="description">Edit rating and review </h3>
+	<div class="col-sm-5">
+		{{ wtf.quick_form(update_form) }}
+	</div>
+	<div class="row">
+		<div class="col-sm-5">
+
+				<p class="description"><br><br>
+					<strong>Current rating:</strong><br>{{ movie_to_update.rating }}<br><br><br>
+					<strong>Current review:</strong> <br>"{{ movie_to_update.review }}"
+				</p>
+
+		</div>
 	
-	<p class="description">Edit Movie Rating<br>
-		Current rating: {{ movie_to_update.rating }}
-	</p>
 	
-	{{ wtf.quick_form(update_form) }}
+	</div>
 </div>
 {% endblock %}

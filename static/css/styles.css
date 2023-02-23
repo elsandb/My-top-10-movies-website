@@ -33,6 +33,11 @@
 	 overflow: hidden;
 	 text-overflow: ellipsis;
 }
+
+p.description {
+    text-align: left;
+}
+
  .heading {
 	 width: 100%;
 	 margin-left: 1rem;
@@ -44,8 +49,9 @@
 	 padding-bottom: 0.5em;
 	 margin-bottom: 1rem;
 	 position: relative;
+
 }
- .heading:after {
+/* .heading:after {
 	 display: block;
 	 content: '';
 	 position: absolute;
@@ -53,7 +59,7 @@
 	 height: 4px;
 	 background: linear-gradient(135deg, #1a9be6, #1a57e6);
 	 bottom: 0;
-}
+}*/
  .description {
 	 width: 100%;
 	 margin-top: 0;
@@ -211,4 +217,8 @@
 }
  .release_date {
 	 font-weight: normal;
+}
+
+.add_form {
+    margin-top: 2%;
 }

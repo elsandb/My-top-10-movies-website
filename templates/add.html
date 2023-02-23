@@ -2,17 +2,32 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block styles %}
-  {{ super() }}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{{ super() }}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 {% endblock %}
 
-{% block title %}Add Movie{% endblock %}
+{% block title %} Add Movie {% endblock %}
 
 {% block content %}
-<div class="content">
-    <h1 class="heading">Add a Movie</h1>
-    {{ wtf.quick_form(add_form) }}
+
+
+<div class="container text-center">
+	<div class="row justify-content-med-center">
+		<h1 class="heading">Add a Movie from</h1>
+	</div>
+	
+	<div class="row">
+		<a href="https://www.themoviedb.org/"><img class="logo"
+		     src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg"
+		     width="300px" alt="IMDB logo."></a>
+	</div>
+	
+	<div class="row">
+		{{ wtf.quick_form(add_form, extra_classes='add_form', method='post', form_type='inline')}}
+	</div>
+
 </div>
+
 {% endblock %}
