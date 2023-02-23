@@ -4,7 +4,7 @@ This project is my solution to the challenge given on day 64 of the Udemy-course
 All CSS, and all HTML code (except code that connect to other files - like Jinja2-templates) were given in the project starting files.
 
 Actual goal:
-- To use SQLAlchemy, Flask-WTF (FlaskForm), Flask-Bootstrap and API calls in one Flask-app, and make the pieces work together in harmony 🎵
+- To use SQLAlchemy, Flask-WTF (FlaskForm), Flask-Bootstrap and API calls in one Flask-app.
 
 Goal: 
 - Make a website where the user can search for movie titles (via API requests to The movie database https://www.themoviedb.org/), 
